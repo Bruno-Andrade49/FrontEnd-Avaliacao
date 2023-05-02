@@ -55,7 +55,7 @@ function Login() {
                             </div>
                             <div class="input">
                                 <i class="fa fa-lock icone"></i>
-                                <input type="password" id="login-password" name="password" placeholder="Password" />
+                                <input type="password" id="login-password" name="password" placeholder="Senha" />
                                 <i id="show-password" class="fa fa-eye icone"></i>
                             </div>
 
