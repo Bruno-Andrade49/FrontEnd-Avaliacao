@@ -1,0 +1,43 @@
+.container-form {
+    display: flex;
+    justify-content: center;
+}
+
+.container-form table {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    align-items: center;
+    width: 80%;
+    background-color: white;
+    padding: 25px;
+}
+
+.candidatos-titulo {
+    font-size: 30px;
+    color: white;
+}
+
+.candidatos-titulo-container {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 80%;
+}
+
+
+.search-pag-form {
+    border: 1px solid transparent ;
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.search-pag-form input{
+    border: none;
+}
+
+.search-pag-form input:focus-visible{
+    border-box: none; 
+}
