@@ -16,6 +16,10 @@ function Produtos() {
 
 
     useEffect(() => {
+        const token = localStorage.getItem('token');
+
+        api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+
         // Faz a requisição para a API de produtos e atualiza o estado com os dados recebidos
         api.get('/product')
             .then(response => {
@@ -44,7 +48,7 @@ function Produtos() {
             name: e.target.elements.nome.value,
             description: e.target.elements.descricao.value,
             quantity: parseInt(e.target.elements.quantidade.value),
-            price: e.target.elements.preco.value
+            price: e.target.elements.preco.value.toString()
         }
 
         // Verificar se o produto já está cadastrado
@@ -166,20 +170,6 @@ function Produtos() {
                 <div>
                     <Button onClick={handleModalOpenCreate}>Cadastrar</Button>
 
-                    <Modal show={showModalEdit} onHide={handleModalCloseEdit}>
-                        <Modal.Header closeButton>
-                            <Modal.Title>Modal title</Modal.Title>
-                        </Modal.Header>
-
-                        <Modal.Body>
-                            <p>Modal body text goes here.</p>
-                        </Modal.Body>
-
-                        <Modal.Footer>
-                            <Button variant="secondary" onClick={handleModalCloseEdit}>Close</Button>
-                            <Button variant="primary">Save changes</Button>
-                        </Modal.Footer>
-                    </Modal>
                 </div>
 
             </div>
@@ -298,7 +288,7 @@ function Produtos() {
                         </div>
                         <div className="form-group">
                             <label htmlFor="preco">Preço</label>
-                            <input type="text" className="form-control" id="preco" name="preco" placeholder="Digite o preço do produto" />
+                            <input type="number" className="form-control" id="preco" name="preco" placeholder="Digite o preço do produto" />
                         </div>
                         <br/>
                         <button type="submit" className="btn btn-primary">Criar Produto</button>

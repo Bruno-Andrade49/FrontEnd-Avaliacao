@@ -16,7 +16,7 @@ function NavBar() {
             <Container>
                 <Row className="w-100">
                     <Col className="text-end" style={{margin:"3px"}}>
-                        <Navbar.Brand>Gerenciamento de Produtos</Navbar.Brand>
+                        <Navbar.Brand>Impulse Constructor</Navbar.Brand>
                     </Col>
                     <Col>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />

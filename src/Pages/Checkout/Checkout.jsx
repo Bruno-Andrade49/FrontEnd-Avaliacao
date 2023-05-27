@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./Checkout.css"
 import NavBar from '../../Componentes/Bootstrap/NavBar/NavBar';
 
 function Checkout() {
+
+    const [produtos, setProdutos] = useState([]);
+
     return (
         <>
             <NavBar />
