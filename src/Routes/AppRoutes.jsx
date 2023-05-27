@@ -7,43 +7,54 @@ import {
 
 import React, { useContext } from "react";
 import Login from "../Pages/Login/Login";
-import Candidatos from "../Pages/Candidatos/Candidatos";
 import Dashboard from "../Pages/Dash/Dash";
-import { AuthContext } from "../Context/AuthContext";
+import { AuthContext, AuthProvider } from "../Context/AuthContext";
+import Produtos from "../Pages/Produtos/Produtos";
+import Checkout from "../Pages/Checkout/Checkout";
 
-
-const PrivateRoute = ({ children }) => {
+const PrivateRoute = ({ element }) => {
     const { logged } = useContext(AuthContext);
 
-    if (!logged) {
-        return <Navigate to="/" replace />;
-    }
+    // Verifica o estado logged no contexto e no localStorage
+    const isAuthenticated = logged || localStorage.getItem("logged") === "true";
 
-    return children;
+    return isAuthenticated ? (
+        element
+    ) : (
+        <Navigate to="/" replace />
+    );
 };
 
 const AppRoutes = () => {
-
-
     return (
-        <Router>
-            <Routes>
+        <AuthProvider>
+            <Router>
+                <Routes>
+                    {/* Login */}
+                    <Route path="/" element={<Login />} />
 
-                {/*Login*/}
-                <Route element={<Login />} path="/" />
+                    {/* Produtos */}
+                    <Route
+                        path="/produtos"
+                        element={<PrivateRoute element={<Produtos />} />}
+                    />
+
+                    {/* Produtos - Checkout */}
+                    <Route
+                        path="/checkout"
+                        element={<PrivateRoute element={<Checkout />} />}
+                    />
 
 
-                {/*Candidatos*/}
-                <Route exact path="/candidatos" element={<PrivateRoute><Candidatos /> </PrivateRoute>} />
-
-
-                {/*Dash*/}
-                <Route exact path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
-
-
-            </Routes>
-        </Router>
-    )
-}
+                    {/* Dash */}
+                    <Route
+                        path="/dashboard"
+                        element={<PrivateRoute element={<Dashboard />} />}
+                    />
+                </Routes>
+            </Router>
+        </AuthProvider>
+    );
+};
 
 export default AppRoutes;

@@ -15,9 +15,9 @@ const AuthProvider = ({ children }) => {
 
     const handleLogin = async (email, senha) => {
         try {
-            const response = await api.post("/auth", {
+            const response = await api.post("/login", {
                 email: email,
-                senha: senha
+                password: senha
             });
 
             if (response.status === 200) {

@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import "./Login.css"
 import Logo from "../../Img/impulse.jpg"
 import { AuthContext } from "../../Context/AuthContext";
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
 
@@ -20,7 +20,7 @@ function Login() {
 
         await handleLogin(data.email, data.senha)
 
-        navigate("/candidatos")
+        navigate("/produtos")
     }
 
     
@@ -32,7 +32,7 @@ function Login() {
             <div class="backdrop"></div>
 
             <div class="page">
-                <div class="container">
+                <div class="container-login">
                     <div class="formulario">
 
                         <div class="header">

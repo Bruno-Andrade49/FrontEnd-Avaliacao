@@ -1,0 +1,47 @@
+{
+    "produtos": [
+      {
+        "id": 1,
+        "nome": "Cimento",
+        "descricao": "Pacote de cimento Portland",
+        "preco": 25.9,
+        "categoria_id": 1
+      },
+      {
+        "id": 2,
+        "nome": "Tinta Látex",
+        "descricao": "Lata de tinta látex branca",
+        "preco": 39.9,
+        "categoria_id": 1
+      },
+      {
+        "id": 3,
+        "nome": "Telha de Cerâmica",
+        "descricao": "Telha cerâmica para cobertura",
+        "preco": 6.5,
+        "categoria_id": 1
+      },
+      {
+        "id": 4,
+        "nome": "Argamassa",
+        "descricao": "Saco de argamassa para assentamento",
+        "preco": 18.5,
+        "categoria_id": 1
+      },
+      {
+        "id": 5,
+        "nome": "Martelo",
+        "descricao": "Martelo de carpinteiro",
+        "preco": 12.9,
+        "categoria_id": 2
+      },
+      {
+        "id": 6,
+        "nome": "Parafuso",
+        "descricao": "Caixa de parafusos variados",
+        "preco": 5.5,
+        "categoria_id": 2
+      }
+    ]
+  }
+  

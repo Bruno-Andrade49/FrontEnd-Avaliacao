@@ -1,17 +1,30 @@
 body {
-	font-family: "open sans", "segoe ui", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-size: 14px;
 	margin: 0;
 	padding: 0;
-  background-color: rgb(0, 0, 33);
+  background-image: url("https://blog.datasales.io/wp-content/uploads/2023/03/Como-vender-mais-nas-Campanhas-de-Natal-do-Supermercado-Post-para-Instagram-quadrado-1280-%C3%97-720-px.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
 }
+
+@media (max-width: 768px) {
+  body {
+    background-size: auto 100vh;
+  }
+}
+
 .page {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
 }
-.container {
+.container-login {
   width: 100%;
   max-width: 350px;
   z-index: 1;
@@ -38,7 +51,7 @@ body {
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
 }
 .background {
-	background-image: url('http://images.unsplash.com/photo-1520846692007-5da001f1b57c?auto=format&fit=crop&w=1000&q=80');
+	background-image: url('https://st4.depositphotos.com/4105587/38119/i/600/depositphotos_381196644-stock-photo-warehouse-industry-blur-background-with.jpg');
 }
 
 /* HEADER */

@@ -7,12 +7,9 @@ import { AuthProvider } from "./Context/AuthContext.jsx";
 
 function App() {
   return (
-    <AuthProvider>
-      <div className="App">
-        <AppRoutes />
-      </div>
-    </AuthProvider>
-
+    <div className="App">
+      <AppRoutes />
+    </div>
   );
 }
 
