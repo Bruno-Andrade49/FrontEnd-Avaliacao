@@ -32,7 +32,7 @@ const AuthProvider = ({ children }) => {
             }
         } catch (error) {
             console.error(error);
-            alert("Ocorreu um erro ao fazer login. Por favor, tente novamente mais tarde.");
+            alert("Ocorreu um erro ao fazer login. Por favor, tente outra senha ou um novo login.");
         }
     };
 
